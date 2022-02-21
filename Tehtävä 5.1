@@ -1,0 +1,44 @@
+using System;
+
+namespace Tehtävä_5._1_Valuuttalaskuri_Vladislav
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Valuuttalaskuri!");
+            Console.WriteLine("-----------------");
+            Console.WriteLine("");
+
+            int luku;
+            int Tai;
+            int ol;
+            Double  Dol = 1.13;
+            Double Pun = 0.84;
+
+            Console.Write("Anna summa euroina! ");
+            luku = int.Parse(Console.ReadLine());
+            Console.Write("Vastaa 1 jos haluat dollareina ja 2 jos haluat punniksi ? ");
+            Tai = int.Parse(Console.ReadLine());
+            Console.WriteLine("");
+
+            if (1==Tai)
+            {
+                string dol = string.Format("{0:0.00}", luku * Dol);
+                Console.WriteLine($"{dol} $");
+
+            }
+            else if (1<2)
+            {
+               string pun = string.Format("{0:0.00}", luku * Pun);
+                Console.WriteLine($"{pun} £");
+            }
+            
+
+
+
+
+
+        }
+    }
+}
