@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Tehtävä_17_Vakioluettelo_Vladislav_jeskin
 {
@@ -15,33 +15,52 @@ namespace Tehtävä_17_Vakioluettelo_Vladislav_jeskin
         }
         static void Main(string[] args)
         {
-            int lisaaNimi =0,lisaaika =0;
-            String nimi
             
+            //Kaikki int ja stringit
+            int aika = 0;            
+            int x = 0;
+            string nimi = "";
+
 
             Console.WriteLine("Tervetuloa ohjelmaan. Siirry valikossa valitsemalla numero.");
-            for (int i=1; i <= 5; i++)
+            
+            for (int i=0; i <= 5; i++)
             {
-                switch (i)
+                Console.WriteLine("1. Syötä nimesi ");
+                Console.WriteLine("2. Syötä ikäsi ");
+                Console.WriteLine("3. Näytä nimesi ");
+                Console.WriteLine("4. Näytä ikäsi ");
+                Console.WriteLine("5. poistu ohjelmasta ");
+                Console.WriteLine("");
+                Console.Write(">");
+                x = int.Parse(Console.ReadLine());
+
+                switch (x)
                 {
                     case (int)Case.Name:
                         Console.Write("Syötä Nimesi ");
-                        lisaaNimi = int.Parse(Console.ReadLine());
+                        nimi = Console.ReadLine();
+                        Console.WriteLine("");
                         break;
                     case (int)Case.Age:
                         Console.Write("Syötä ikäsi ");
-                        lisaaika = int.Parse(Console.ReadLine());
+                        aika = int.Parse(Console.ReadLine());
+                        Console.WriteLine("");
                         break;
                     case (int)Case.showname:
-                        Console.Write("Nimesi on  " + nautaNimi);
+                        Console.Write("Nimesi on : " + nimi);
+                        Console.WriteLine("");
                         break;
                     case (int)Case.showage:
-                        Console.Write("ikäsi on " + naytaika);
+                        Console.Write("ikäsi on : " + aika);
+                        Console.WriteLine("");
                         break;
                     case (int)Case.quit:
 
+
                         break;
                 }
+               
             }
         }  
     }
