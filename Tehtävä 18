@@ -1,0 +1,24 @@
+using System.Text;
+namespace string_function
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string sanalause;
+            Console.Write("Anna jokin sana tai lause, niin ohjelma tekee sille temppuja.  :"); string originalString = Console.ReadLine();
+            string reverseString = string.Empty;
+            for (int i = originalString.Length - 1; i >= 0; i--)
+            {
+                string uppercase=reverseString += originalString[i];
+            }
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine(originalString);
+            Console.Write($"{reverseString.ToUpper()} ");
+            Console.WriteLine("");
+
+        }
+
+    } 
+}
