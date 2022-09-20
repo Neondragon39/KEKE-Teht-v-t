@@ -1,0 +1,48 @@
+using System;
+
+namespace Tehtävä_7._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Tehtävä 7.4");
+            Console.WriteLine();
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine();
+            Console.WriteLine("Saat 5 mahdollisuutta arvata luvun 1-12 väliltä.");
+            Console.WriteLine();
+
+            int luku = 0;
+            //random luku joka valitsee 1-12 väliltä
+            Random rnd = new Random();
+            int arvonta = rnd.Next(1, 13);
+
+            for (int i = 1; i < 6; i++) //for looppi
+            {
+                Console.Write(Convert.ToString(i) + ". yritys: Arvaa luku: "); //Luodaan kysymys 
+                luku = int.Parse(Console.ReadLine());//Tallennetaan vastaus
+                Console.WriteLine();//Välirivi
+
+                if (luku != arvonta && i < 6) //Luku ei mennyt oikein ja kierroksia on vähemmän kuin 5
+                {
+                    Console.WriteLine("Arvasit väärin!");
+                    Console.WriteLine();//Välirivi
+                }
+
+                else if (luku == arvonta)//Kyn käyttäjän arvo on samakuin arvonnan random numero
+                {
+                    Console.WriteLine("Onneksi olkoon, arvasit oikein!");
+                    break;//Katkaisee kyselyn
+                }
+
+                if (i == 5)//Jos arvonta lukua ei olla saatu oikein 5 yrityskerralla syötetään tuleva syöte
+                {
+                    Console.WriteLine("Se oli viimeinen yrityksesi ! ");
+                    Console.WriteLine();//Välirivi
+                    Console.WriteLine("Oikea vastaus oli " + arvonta);//oikea vastaus
+                }
+            }
+        }
+    }
+}
