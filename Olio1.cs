@@ -22,16 +22,19 @@ namespace Olio1
         public string Nimi()
         {
             Console.WriteLine("Nimi metodia käytetty");
-            return nimi;    
+            return nimi;
         }
-
-
-
+        public string PalautaTeoksenNimi()
+        {
+          Console.WriteLine("PalautaTeoksenNimi metodia käytetty");
+          
+          return nimi;
+        }
         //oletuskonstruktio
         public Kirjasto()
         {
             erapaiva = 0; //oletetaan, että tässä on lainausaika, esim. 30 päivää.
-                          //ei koko päiväystä, joka vaatisi useamman eri muuttujan 
+                          //ei koko päiväystä, joka vaatisi useamman eri muuttujan
             sivumäärä = 0;
             nimi = ""; //kaksi lainausmerkkiä alustaa merkkijonon arvoksi null
 
@@ -66,7 +69,7 @@ namespace Olio1
                 u_nimi = double.Parse(Console.ReadLine());
 
                 Kirjasto kirjasto = new Kirjasto();
-                kirjasto.Erapaiva = u_erapaiva;
+                kirjasto.Erapaiva = u_erapaiva; 
                 kirjasto.Sivumäärä =
 
             }
@@ -74,6 +77,8 @@ namespace Olio1
             {
                 Console.WriteLine("palauta");
             }
+            Console.Writeline("\n\npaina jotain näppäitä jatkaaksesi...");
+            Console.ReadKey(true);
         }
     }
-}
+  }
